@@ -24,12 +24,14 @@ double pythagoras(double xcomp, double ycomp) {
 }
 
 void showResult(double result_vec_length, double result_vec_direction) {
+    cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% " << endl;
     cout << "Length of the resultant vector = " << result_vec_length << endl;
     cout << "Direction of the resultant vector (deg) = " << result_vec_direction << endl;
+    cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% " << endl;
 }
 
-int main() {
-    double l1, l2, a1, a2, xcomp, ycomp, result_vec_length, result_vec_direction;
+int main(){
+    double l1,l2,a1,a2,xcomp,ycomp,result_vec_length,result_vec_direction;
     cout << "Enter length of the first vector: ";
     cin >> l1;
     cout << "Enter direction of the first vector (deg): ";
@@ -46,11 +48,5 @@ int main() {
     result_vec_length = pythagoras(xcomp,ycomp);
     result_vec_direction = rad2deg(atan2(ycomp,xcomp)); 
 
-    cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% " << endl;
-
-
     showResult(result_vec_length,result_vec_direction);
-
-    cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% " << endl;
-
 }
